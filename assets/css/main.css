@@ -3369,6 +3369,16 @@ html {
     line-height: 1.5;
 }
 
+.project-title-link {
+    color: inherit;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.project-title-link:hover {
+    color: #49bf9d;
+}
+
 .project-meta {
     margin: 0 0 0.85em 0;
     font-size: 0.82em;

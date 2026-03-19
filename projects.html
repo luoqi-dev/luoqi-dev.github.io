@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Projects</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="assets/css/main.css?v=20260306"/>
+        <link rel="stylesheet" href="assets/css/projects.css?v=20260306"/>
+        <script>/* Pinegrow Interactions, do not remove */ (function(){try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { window.pgia_small_mq=typeof pgia_small_mq=='string'?pgia_small_mq:'(max-width:767px)';window.pgia_large_mq=typeof pgia_large_mq=='string'?pgia_large_mq:'(min-width:768px)';var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id') && document.documentElement.hasAttribute('data-pg-mobile')) {pgia_small_mq='(min-width:0)';pgia_large_mq='(min-width:99999px)'} pgcss+='@media ' + pgia_small_mq + '{ html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}}';pgcss+='@media ' + pgia_large_mq + '{html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}}';style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}})()</script>
+    </head>
+    <body class="is-preload subpage subpage-projects">
+        <header id="header">
+            <div class="inner">
+                <h1><strong>PROJECTS</strong></h1>
+                <nav class="subpage-nav" aria-label="Project navigation">
+                    <ul>
+                        <li><a href="#project-1">Smart Fridge System</a></li>
+                        <!--li><a href="#project-2">Embedded Motor Control Platform</a></li>
+                        <li><a href="#project-3">Campus Navigation Service</a></li>
+                        <li><a href="#project-4">Performance Profiling Toolkit</a></li-->
+                        <li class="nav-back-home"><a href="index.html#projects">Back to Home</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="main">
+            <section class="projects-stack">
+                <article class="project-entry" id="project-1">
+                    <header class="project-entry-header">
+                        <h2 class="project-entry-title">Smart Fridge System</h2>
+                        <p class="project-entry-subtitle">AI-assisted inventory capture for a shared refrigerator workflow.</p>
+                        <div class="project-entry-meta" aria-label="Project information">
+                            <time class="project-entry-meta-item" datetime="2026-01">
+                                <span class="meta-label">Time</span> Jan 2026 - Mar 2026
+                            </time>
+                            <span class="meta-dot">•</span>
+                            <span class="project-entry-meta-item"><span class="meta-label">Stack</span> Linux / C++ / YOLO</span>
+                            <span class="meta-dot">•</span>
+                            <span class="project-entry-meta-item"><span class="meta-label">Role</span> Team Lead</span>
+                        </div>
+                    </header>
+                    <figure class="project-figure">
+                        <div class="project-video-embed">
+                            <iframe
+                                src="https://www.youtube.com/watch?v=fV0JKsauYis"
+                                title="Smart Fridge System demo video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen></iframe>
+                        </div>
+                        <figcaption class="project-caption">Demo video via YouTube embed placeholder.</figcaption>
+                    </figure>
+                    <div class="project-entry-content">
+                        <p>This project focused on turning a refrigerator into a small embedded vision system that could observe activity at the door, capture an image only when relevant movement occurred, and pass that image into an object-detection pipeline. The goal was to reduce manual tracking and provide a more reliable view of what food was actually available.</p>
+                        <p>I led a five-person team through requirements definition, pipeline planning, and system integration. We broke the problem into sensing, image capture, inference, and item-state reporting so that each layer could be tested independently before end-to-end integration.</p>
+                        <p>The resulting system combined motion-triggered capture with YOLO-based classification to identify food items automatically. A strong part of the work was not just getting inference to run, but shaping the surrounding workflow so the hardware behavior, software timing, and output format all fit together as one coherent system.</p>
+                    </div>
+                </article>
+                <!--hr class="project-divider"/>
+                <article class="project-entry" id="project-2">
+                    <header class="project-entry-header">
+                        <h2 class="project-entry-title">Embedded Motor Control Platform</h2>
+                        <p class="project-entry-subtitle">A deterministic control stack with diagnostics for real-time tuning.</p>
+                        <div class="project-entry-meta" aria-label="Project information">
+                            <time class="project-entry-meta-item" datetime="2025-03">
+                                <span class="meta-label">Time</span> Mar 2025 - Aug 2025
+                            </time>
+                            <span class="meta-dot">•</span>
+                            <span class="project-entry-meta-item"><span class="meta-label">Stack</span> STM32 / FreeRTOS</span>
+                            <span class="meta-dot">•</span>
+                            <span class="project-entry-meta-item"><span class="meta-label">Focus</span> Control Timing</span>
+                        </div>
+                    </header>
+                    <figure class="project-figure">
+                        <img src="images/background/road.jpg" alt="Placeholder cover for Embedded Motor Control Platform">
+                        <figcaption class="project-caption">Existing background asset used as a placeholder for future project media.</figcaption>
+                    </figure>
+                    <div class="project-entry-content">
+                        <p>The platform was built around the idea that control quality depends on timing discipline as much as algorithm quality. I implemented a task structure that kept the control loop predictable while still leaving room for telemetry, operator feedback, and field diagnostics.</p>
+                        <p>FreeRTOS provided the scheduling foundation, while UART and CAN interfaces were used to expose internal state and simplify debugging under load. A large part of the engineering effort went into reducing interrupt-path overhead and organizing buffers so instrumentation did not destabilize the core loop.</p>
+                        <p>By the end of the project, the system could maintain stable behavior under stress testing while still producing useful diagnostic output. That balance between observability and determinism was the main design constraint throughout the build.</p>
+                    </div>
+                </article>
+                <hr class="project-divider"/>
+                <article class="project-entry" id="project-3">
+                    <header class="project-entry-header">
+                        <h2 class="project-entry-title">Campus Navigation Service</h2>
+                        <p class="project-entry-subtitle">Route recommendations tuned for time, context, and campus traffic patterns.</p>
+                        <div class="project-entry-meta" aria-label="Project information">
+                            <time class="project-entry-meta-item" datetime="2024-10">
+                                <span class="meta-label">Time</span> Oct 2024 - Feb 2025
+                            </time>
+                            <span class="meta-dot">•</span>
+                            <span class="project-entry-meta-item"><span class="meta-label">Stack</span> Web / Node.js</span>
+                            <span class="meta-dot">•</span>
+                            <span class="project-entry-meta-item"><span class="meta-label">Focus</span> Routing</span>
+                        </div>
+                    </header>
+                    <figure class="project-figure">
+                        <img src="images/background/sky-raod.JPG" alt="Placeholder cover for Campus Navigation Service">
+                        <figcaption class="project-caption">Existing asset used for now; this slot accepts either an image or a video element.</figcaption>
+                    </figure>
+                    <div class="project-entry-content">
+                        <p>This service explored how route planning changes when the objective is not just shortest distance, but a more practical campus experience. I built the backend around indexed path data and a scoring layer that could weigh travel time, availability, and situational factors instead of returning a single naive route.</p>
+                        <p>The implementation included caching and fallback logic so the service would remain responsive during heavier request bursts. That mattered because route queries often cluster around the same schedule boundaries, which can create localized spikes rather than smooth traffic.</p>
+                        <p>The most valuable outcome was the system framing: map data, request handling, scoring, and fallback behavior were treated as separate concerns, which made the service easier to tune and reason about as requirements evolved.</p>
+                    </div>
+                </article>
+                <hr class="project-divider"/>
+                <article class="project-entry" id="project-4">
+                    <header class="project-entry-header">
+                        <h2 class="project-entry-title">Performance Profiling Toolkit</h2>
+                        <p class="project-entry-subtitle">Trace aggregation and regression snapshots for faster performance triage.</p>
+                        <div class="project-entry-meta" aria-label="Project information">
+                            <time class="project-entry-meta-item" datetime="2024-05">
+                                <span class="meta-label">Time</span> May 2024 - Sep 2024
+                            </time>
+                            <span class="meta-dot">•</span>
+                            <span class="project-entry-meta-item"><span class="meta-label">Stack</span> Python / Linux</span>
+                            <span class="meta-dot">•</span>
+                            <span class="project-entry-meta-item"><span class="meta-label">Focus</span> Profiling</span>
+                        </div>
+                    </header>
+                    <figure class="project-figure">
+                        <img src="images/background/forest.JPG" alt="Placeholder cover for Performance Profiling Toolkit">
+                        <figcaption class="project-caption">Existing site image used as placeholder media until project-specific visuals are added.</figcaption>
+                    </figure>
+                    <div class="project-entry-content">
+                        <p>This toolkit was designed to shorten the gap between collecting raw system traces and understanding whether performance had actually regressed. I built a reporting flow that gathered CPU, memory, and I/O observations into a smaller set of signals that engineers could inspect quickly.</p>
+                        <p>Anomaly tagging and regression snapshots were added to make comparisons more actionable over time. Instead of treating each profiling run as an isolated artifact, the toolkit preserved enough structure to make drift easier to spot across repeated measurements.</p>
+                        <p>The project emphasized practical debugging support over theoretical completeness. The value came from making noisy low-level data easier to review, compare, and communicate during performance investigations.</p>
+                    </div>
+                </article-->
+            </section>
+        </div>
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li>
+                        <a href="https://github.com/luoqi-dev" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a>
+                    </li>
+                </ul>
+                <ul class="copyright">
+                    <li>Background Photograph: Captured in <br>Olumpic National Park<br>October 2025<br></li>
+                </ul>
+            </div>
+        </footer>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.poptrox.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="pgia/lib/pgia.js"></script>
+        <script src="assets/js/nav-scroll.js"></script>
+    </body>
+</html>
