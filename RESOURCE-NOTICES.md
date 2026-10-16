@@ -6,4 +6,4 @@ The previous site used **Strata by Pixelarity** (pixelarity.com, hello@pixelarit
 
 Unused Font Awesome font files and their original stylesheet are retained as historical resources. Font Awesome Free 5.15.4: https://fontawesome.com/license/free — icons CC BY 4.0, fonts SIL OFL 1.1, code MIT. The stylesheet retains its original license notice.
 
-The avatar and UW logo were already present in the repository. University marks remain the property of their respective owners. Add an appropriately sourced Georgia Tech mark when available; no third-party logo was downloaded for this redesign.
+The avatar and UW logo were already present in the repository. University marks remain the property of their respective owners. The Georgia Tech logo was supplied by the owner as `gt-logo.png` and copied unchanged to `images/logos/georgia-tech.png`.

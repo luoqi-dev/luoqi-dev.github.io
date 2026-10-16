@@ -41,16 +41,7 @@ Projects are repeated `article.project-entry` blocks in `index.html`. Copy a blo
 
 ### Georgia Tech logo
 
-Reserved path: **`images/logos/georgia-tech.png`**.
-
-Until an approved image is available, the logo container shows GT without attempting a missing network request. After placing the PNG, replace the GT span in `index.html` with:
-
-```html
-<img src="images/logos/georgia-tech.png" width="64" height="64"
-     alt="Georgia Tech logo" loading="lazy">
-```
-
-The existing `.school-logo img` rule uses `object-fit: contain`, matching UW. Remove the `role="img"` and `aria-label` on this container when using the image's alt text.
+The owner-provided logo is stored at **`images/logos/georgia-tech.png`**. Replace this file to update the mark. The shared `.school-logo img` rule uses `object-fit: contain`, matching UW and preserving the image’s proportions.
 
 ### Project media
 

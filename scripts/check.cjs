@@ -41,7 +41,7 @@ fs.mkdirSync(output, {recursive:true});
     }
     await page.setViewportSize({width:1440,height:900});
     await page.goto(`${base}/index.html`);
-    assert.equal(await page.locator('.school-logo-gt').innerText(),'GT');
+    assert.ok(await page.locator('.school-logo-gt img').evaluate(img => img.complete && img.naturalWidth > 0));
     assert.equal(await page.locator('a[href="#"]').count(),0);
     // Every local link and asset resolves, including fragment targets.
     const resources = await page.locator('a[href], img[src], script[src], link[href]').evaluateAll(elements => elements.map(e=>e.getAttribute('href') || e.getAttribute('src')));
@@ -54,7 +54,7 @@ fs.mkdirSync(output, {recursive:true});
         assert.ok(html.includes(`id="${url.hash.slice(1)}"`),`Missing target ${resource}`);
       }
     }
-    findings.checks.push('Local links, anchors, assets, GT text fallback, no placeholder links');
+    findings.checks.push('Local links, anchors, assets, GT logo, no placeholder links');
     await page.locator('.section-nav a[href="#experience"]').click();
     const activeDuringScroll = [];
     for(let i=0;i<8;i++) { activeDuringScroll.push(await page.locator('.section-nav [aria-current]').getAttribute('href')); await page.waitForTimeout(75); }
